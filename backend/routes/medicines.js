@@ -113,10 +113,10 @@ router.post('/recommend', async (req, res) => {
     }
     
     const query = {
-      $or: symptoms.map(symptom => ({
-        symptoms: { $regex: symptom, $options: 'i' }
-      }))
-    }
+  symptoms: {
+    $in: symptoms.map(symptom => symptom.toLowerCase())
+  }
+}
     
     let medicines = await Medicine.find(query).sort({ rating: -1 })
     

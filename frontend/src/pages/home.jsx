@@ -15,7 +15,7 @@ export default function Home() {
     setLoading(true)
     
     try {
-      const response = await fetch('http://https://medireco-backend.onrender.com/api/medicines/recommend', {
+      const response = await fetch('https://medireco-backend.onrender.com/api/medicines/recommend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ symptoms: symptoms.split(','), severity })
@@ -47,7 +47,7 @@ export default function Home() {
     }
     
     try {
-      const response = await fetch('http://https://medireco-backend.onrender.com/api/medicines/search', {
+      const response = await fetch('https://medireco-backend.onrender.com/api/medicines/search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
