@@ -1,11 +1,13 @@
 export default function GlassCard({ children, className = '' }) {
   return (
     <div className={`
-      bg-white 
-      border-2 border-slate-100 
+      glass 
       rounded-2xl 
-      shadow-sm 
+      shadow-xl 
       p-6 
+      hover:shadow-2xl 
+      transition-all 
+      duration-300
       ${className}
     `}>
       {children}

@@ -10,8 +10,8 @@ export default function SearchBar({ onSearch, placeholder = "Search medicines, s
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto">
-      <div className="relative">
-        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">
+      <div className="relative group">
+        <span className="absolute left-5 top-1/2 -translate-y-1/2 text-2xl text-slate-400 group-focus-within:text-teal-500 transition-colors">
           🔍
         </span>
         <input
@@ -19,11 +19,11 @@ export default function SearchBar({ onSearch, placeholder = "Search medicines, s
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-12 pr-32 py-4 bg-white border-2 border-slate-200 rounded-2xl shadow-sm focus:border-blue-400 focus:ring-4 focus:ring-blue-50/50 outline-none transition-all text-base"
+          className="w-full pl-14 pr-36 py-5 glass border-2 border-transparent rounded-2xl shadow-lg focus:shadow-xl focus:border-teal-300 focus:bg-white/80 outline-none transition-all text-base"
         />
         <button
           type="submit"
-          className="absolute right-2 top-1/2 -translate-y-1/2 px-5 py-2 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2.5 bg-gradient-to-r from-teal-500 to-blue-500 text-white font-medium rounded-xl hover:shadow-lg hover:scale-105 transition-all"
         >
           Search
         </button>
